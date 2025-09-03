@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import SearchBar from "@/components/SearchBar/SearchBar";
 import UserCard from "@/components/UserCard/UserCard";
@@ -25,28 +24,36 @@ export default function UsersClient({ users }: { users: User[] }) {
 
   return (
     <>
-      <div className="mb-4">
-        <SearchBar value={search} onChange={setSearch} />
-      </div>
+      <h1 className="text-lg font-bold uppercase mb-7 lg:text-2xl text-gray-600">
+        user dashboard
+      </h1>
+      <div>
+        {/* search bar */}
+        <div className="mb-4">
+          <SearchBar value={search} onChange={setSearch} />
+        </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {paginated.length === 0 ? (
-          <p className="text-center text-gray-600 col-span-full">
-            No users found.
-          </p>
-        ) : (
-          paginated.map((u) => <UserCard key={u.id} user={u} />)
-        )}
-      </div>
+        {/* user card  */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {paginated.length === 0 ? (
+            <p className="text-center text-gray-600 col-span-full">
+              No users found.
+            </p>
+          ) : (
+            paginated.map((u) => <UserCard key={u.id} user={u} />)
+          )}
+        </div>
 
-      <div className="mt-6">
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={(p) =>
-            setCurrentPage(Math.min(Math.max(1, p), totalPages))
-          }
-        />
+        {/* pagination */}
+        <div className="mt-6">
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={(p) =>
+              setCurrentPage(Math.min(Math.max(1, p), totalPages))
+            }
+          />
+        </div>
       </div>
     </>
   );
