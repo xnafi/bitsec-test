@@ -6,7 +6,7 @@ export default async function UsersPage() {
   const newData = res.data;
 
   return (
-    <div className="container">
+    <div>
       {/* user client data where data mapped  */}
       <UsersClient users={newData} />
     </div>

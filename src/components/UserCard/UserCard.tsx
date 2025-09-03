@@ -1,16 +1,23 @@
-"use client"
-import React, { FC } from "react";
+"use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { User } from "@/types/user";
 
-const UserCard: FC<{ user: User }> = ({ user }) => {
+interface UserCardProps {
+  user: User;
+}
+const UserCard = ({ user }: UserCardProps) => {
   return (
     <Link href={`/users/${user.id}`}>
       <motion.div
         whileHover={{ scale: 1.02 }}
-        transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        className="cursor-pointer p-4 border rounded-xl shadow bg-white hover:shadow-lg overflow-hidden"
+        transition={{
+          type: "tween",
+          stiffness: 50,
+          damping: 200,
+          duration: 0.5,
+        }}
+        className="cursor-pointer p-4 border rounded-xl shadow bg-white hover:shadow-lg overflow-hidden hover:bg-gray-300"
         role="article"
         aria-label={`Open details for ${user.name}`}
       >

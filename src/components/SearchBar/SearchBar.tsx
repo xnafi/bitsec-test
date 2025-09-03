@@ -1,12 +1,9 @@
-"use client";
-import { FC } from "react";
-
 interface Props {
   value: string;
   onChange: (val: string) => void;
 }
 
-const SearchBar: FC<Props> = ({ value, onChange }) => {
+const SearchBar= ({ value, onChange }: Props) => {
   return (
     <input
       type="text"

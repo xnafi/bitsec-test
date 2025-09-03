@@ -6,8 +6,11 @@ import Pagination from "@/components/Pagination/Pagination";
 import { User } from "@/types/user";
 
 export default function UsersClient({ users }: { users: User[] }) {
+  // search state
   const [search, setSearch] = useState("");
+  // pagination state
   const [currentPage, setCurrentPage] = useState(1);
+  // data limit
   const usersPerPage = 5;
 
   // filter by name/email
@@ -24,10 +27,10 @@ export default function UsersClient({ users }: { users: User[] }) {
 
   return (
     <>
-      <h1 className="text-lg font-bold uppercase mb-7 lg:text-2xl text-gray-600">
-        user dashboard
-      </h1>
-      <div>
+      <div className="container shadow-md rounded-2xl mt-10">
+        <h1 className="text-lg font-bold uppercase mb-7 lg:text-2xl text-gray-600">
+          user dashboard
+        </h1>
         {/* search bar */}
         <div className="mb-4">
           <SearchBar value={search} onChange={setSearch} />

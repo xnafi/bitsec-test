@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { User } from "@/types/user";
 
 export default function UserDetailsClient({ user }: { user: User | null }) {
+  // if data not found this will appear
   if (!user) {
     return <p className="text-center mt-10 text-gray-600">User not found.</p>;
   }
@@ -14,7 +15,7 @@ export default function UserDetailsClient({ user }: { user: User | null }) {
       initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35 }}
-      className="bg-white p-6 rounded-xl shadow max-w-2xl mx-auto"
+      className="bg-white p-6 rounded-xl shadow max-w-2xl mx-auto container"
     >
       <h2 className="text-2xl font-bold mb-2">{user.name}</h2>
       <p className="mb-1">

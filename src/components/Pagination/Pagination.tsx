@@ -1,4 +1,4 @@
-import React, { FC, useMemo } from "react";
+import React, { useMemo } from "react";
 
 interface Props {
   currentPage: number;
@@ -6,7 +6,7 @@ interface Props {
   onPageChange: (page: number) => void;
 }
 
-const Pagination: FC<Props> = ({ currentPage, totalPages, onPageChange }) => {
+const Pagination = ({ currentPage, totalPages, onPageChange }: Props) => {
   const pages = useMemo(() => {
     // simple list 1..totalPages
     const arr: number[] = [];
@@ -43,7 +43,7 @@ const Pagination: FC<Props> = ({ currentPage, totalPages, onPageChange }) => {
           </button>
         ))}
       </div>
-
+      {/* buttons */}
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
