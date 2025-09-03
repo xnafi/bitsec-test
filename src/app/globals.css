@@ -11,7 +11,48 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+@layer utilities {
+  .container {
+    @apply max-w-[1440px] px-4 py-10 mx-auto;
+  }
+  .primaryColor {
+    @apply text-[#B98B5C];
+  }
+  .primaryBg {
+    @apply bg-[#B98B5C];
+  }
+  .secondaryColor {
+    @apply text-[#d63a76];
+  }
+  .hover {
+    @apply hover:text-[#b98b5c] transition-all  duration-500;
+  }
+  .secondaryBg {
+    @apply bg-[#d63a76];
+  }
+  .infoColor {
+    @apply text-[#0aeae2];
+  }
+  .extraColor {
+    @apply text-[#eba594];
+  }
+  .extraBg {
+    @apply bg-[#eba594];
+  }
 
+  .hero-heading {
+    @apply text-[22px] lg:text-[48px] 2xl:text-[62px] font-bold uppercase text-[#3F1C12];
+  }
+  .sub-heading {
+    @apply text-2xl lg:text-[32px] 2xl:text-[38px] font-bold text-[#3F1C12];
+  }
+  .sub-heading-para {
+    @apply text-[22px] md:text-[28px] font-bold;
+  }
+  .para-text {
+    @apply text-[16px] md:text-[16px] font-normal text-[#2d140d];
+  }
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -20,7 +61,7 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: white;
+  color: black;
   font-family: Arial, Helvetica, sans-serif;
 }
