@@ -1,6 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# User Dashboard
 
-## Getting Started
+A **responsive dashboard application** built with **Next.js**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**, featuring:
+
+- User list page with search and pagination  
+- User details page  
+- Responsive design for mobile and desktop  
+- Smooth animations with Framer Motion  
+- Server-side data fetching with Axios  
+
+Data is fetched from the **JSONPlaceholder API**.
+
+---
+
+## Demo
+
+**Live Demo:** [Add your deployed Vercel link here]
+
+---
+
+## Features
+
+- **User List Page**
+  - Displays users in a card grid
+  - Search users by **name** or **email**
+  - Pagination to limit users per page
+  - Animated hover effects on cards  
+
+- **User Details Page**
+  - Click a user card to view detailed information
+  - Includes email, phone, company, and address
+  - Smooth entrance animation  
+
+- **Responsive Design**
+  - Works seamlessly on mobile, tablet, and desktop  
+
+- **Animations**
+  - Hover and entrance animations using **Framer Motion**  
+
+---
+
+## Tech Stack
+
+- **Next.js 15.5.2** (App Router)  
+- **TypeScript**  
+- **Tailwind CSS**  
+- **Framer Motion**  
+- **Axios** for API calls  
+- **JSONPlaceholder** as the API  
+
+---
+
+
 
 First, run the development server:
 
